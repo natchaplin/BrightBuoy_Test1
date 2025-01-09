@@ -1,1 +1,2 @@
-**Disclaimer**: Test Area for BrightBuoy Wed Dev.
+***Disclaimer***  
+Test Area for BrightBuoy Wed Dev.
