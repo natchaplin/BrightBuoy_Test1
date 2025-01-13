@@ -180,3 +180,17 @@ li {
    .body2{
     background-color: black(0,0,0,0.9);
    }
+
+.bigMenu {
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:10;
+    background-color:rgba(0, 0, 0, 0.75);
+    color:white;
+    display: none;
+}
+
+.bigMenu.on {
+    display:block;
+}

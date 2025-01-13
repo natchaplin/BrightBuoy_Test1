@@ -7,3 +7,10 @@
 //   function closeNav() {
 //     document.getElementById("myNav").style.width = "0%";
 //   }
+
+function toggleBigMenuOnOff() {
+  const elements = document.getElementsByClassName('bigMenu');
+
+  elements[0] && elements[0].classList.toggle('on');
+  //   console.log('toggleBigMenuOnOff');
+}
