@@ -14,3 +14,9 @@ function toggleBigMenuOnOff() {
   elements[0] && elements[0].classList.toggle('on');
   //   console.log('toggleBigMenuOnOff');
 }
+function toggleButtonOnOff() {
+  const elements = document.getElementsByClassName('button');
+
+  elements[0] && elements[0].classList.toggle('on');
+    console.log('toggleButtonOnOff');
+}
