@@ -1,0 +1,21 @@
+{
+    "buoy": "001AAA",
+    "id": "47e19d74-6359-4ca2-a137-4af85b4cd7ae",
+    "data": [
+        {
+            "datetime": "1736983948",
+            "temperature": 30.0,
+            "temperature_unit": "f"
+        },
+        {
+            "datetime": "1736983948",
+            "temperature": 30.0,
+            "temperature_unit": "f"
+        },
+        {
+            "datetime": "1736983948",
+            "temperature": 30.0,
+            "temperature_unit": "f"
+        }
+    ]
+}
