@@ -220,3 +220,10 @@ li {
 .bigMenu li:hover {
     background-color: black;
 }
+.eventualimage {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    margin-left: 25px;
+    margin-top: 70px;
+}
