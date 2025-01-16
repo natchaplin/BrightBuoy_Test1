@@ -330,14 +330,15 @@ div.drop {
 h1 {
   color: white;
   position: absolute;
-  font-size: 2.5em;
-  height: 1em;
+  font-size: 4em;
+  height: 3em;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 2;
   margin: auto;
   text-align: center;
   opacity: 0;
   animation: appear 2s 2.5s forwards;
+  font-family:copperplate;
 }
 
 @keyframes appear {
