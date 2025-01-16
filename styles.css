@@ -300,7 +300,7 @@ li {
 } */
 body {
   overflow: hidden;
-  background: rgb(25,35,125);
+  background: rgb(50,76,128);
 }
 
 div.drop-container {
@@ -323,7 +323,7 @@ div.drop {
   border-radius: 100% 5% 100% 100%;
   transform: rotate(-45deg);
   margin: 0px;
-  background: deepskyblue;
+  background: rgb(227, 247, 255);
   animation: drip 4s forwards;
 }
 
