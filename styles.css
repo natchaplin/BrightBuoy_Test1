@@ -280,7 +280,7 @@ li {
         transform: translateX(3000px)
     }
 }
-.styleindex {
+/* .styleindex {
     animation-name: slideInLeft;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
@@ -288,7 +288,7 @@ li {
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: none;
-}
+} */
 /* .styleindex {
     animation-name: slideOutRight;
     animation-duration: 1.5s;
