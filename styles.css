@@ -489,7 +489,6 @@ body {
 .watahbox2{
     height: 580px;
     width:100%;
-    border-width: 5px;
     background-color:rgb(252,252,252);
     border-radius: 50%
     z-index:90;
@@ -497,6 +496,5 @@ body {
     border-bottom:8px;
     border-left:8px;
     border-right:8px;
-    border-style:double;
     animation: fill ease-in-out 7s
 }
