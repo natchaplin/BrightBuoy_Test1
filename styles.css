@@ -326,6 +326,7 @@ div.drop {
   margin: 0px;
   background: rgb(227, 247, 255);
   animation: drip 4s forwards;
+  z-index: 100;
 }
 
 h1 {
@@ -343,6 +344,7 @@ h1 {
   animation: appear 2s 2.5s forwards;
   font-family:copperplate;
   text-shadow: 2px 2px 2px rgb(64, 86, 99);
+  z-index:99;
 }
 
 @keyframes appear {
