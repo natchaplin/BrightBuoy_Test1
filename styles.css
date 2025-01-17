@@ -498,6 +498,6 @@ body {
     border-bottom:8px;
     border-left:8px;
     border-right:8px;
-    animation: fill ease-in-out 7s
-    animation: delay 10s
+    animation: fill ease-in-out 7s;
+    animation-delay: 8s;
 }
