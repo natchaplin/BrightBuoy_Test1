@@ -499,4 +499,5 @@ body {
     border-left:8px;
     border-right:8px;
     animation: fill ease-in-out 7s
+    animation: delay 10s
 }
