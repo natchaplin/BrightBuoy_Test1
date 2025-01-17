@@ -490,9 +490,9 @@ body {
     height: 580px;
     width:100%;
     border-width: 5px;
-    border-color:rgb(252,252,252);
+    background-color:rgb(252,252,252);
     border-radius: 50%
-    z-index:100;
+    z-index:90;
     border-top:8px;
     border-bottom:8px;
     border-left:8px;
