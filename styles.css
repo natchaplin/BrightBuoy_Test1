@@ -239,7 +239,7 @@ li {
     border-radius: 20%;
 }
 .words {
-    color: (252,252,252);
+    color: rgb(252,252,252);
 }
 .styleindex{
     background-color:rgb(50, 76, 128);
@@ -328,18 +328,20 @@ div.drop {
 }
 
 h1 {
-  color: white;
+  /* color: white; */
+  color:black;
   position: absolute;
   font-size: 4em;
   height: 3em;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 2;
   margin: auto;
+  margin-bottom: 11%;
   text-align: center;
   opacity: 0;
   animation: appear 2s 2.5s forwards;
   font-family:copperplate;
-  text-shadow: 2px 2px 2px rgb(240, 234, 234);
+  text-shadow: 2px 2px 2px rgb(64, 86, 99);
 }
 
 @keyframes appear {
@@ -407,7 +409,7 @@ div.drop-container:after {
 }
 body {
 	display: flex;
-	background: #000;
+	background: rgb(50,76,128);
 	min-height: 100vh;
 	align-items: center;
 	justify-content: center;
@@ -454,4 +456,34 @@ body {
 			0% 100%
 		);
 	}
+}
+@keyframes fill {
+    from {
+        top:250px;
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        top:-50px;
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+.watah:after{
+    height: 100%;
+    width:100%;
+    position:absolute;
+    animation: fill ease-in-out 7s;
+    background-color:rgb(252,252,252);
+}
+.watahbox{
+    height: 580px;
+    width:100%;
+    border-width: 5px;
+    border-color:rgb(50,76,128);
+    z-index:100;
+    border-top:8px;
+    border-bottom:8px;
+    border-left:8px;
+    border-right:8px;
+    border-style:double;
+    /* animation: fill ease-in-out 7s */
 }
