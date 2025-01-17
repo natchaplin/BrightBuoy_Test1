@@ -301,6 +301,7 @@ li {
 body {
   overflow: hidden;
   background: rgb(50,76,128);
+  display:flex;
 }
 
 div.drop-container {
@@ -460,7 +461,8 @@ body {
 @keyframes fill {
     from {
         top:250px;
-        transform: translateX(-50%) rotate(0deg);
+        transform: translateX(-240px) rotate(0deg);
+	
     }
     to {
         top:-50px;
