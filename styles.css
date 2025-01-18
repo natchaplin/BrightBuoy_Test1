@@ -298,10 +298,11 @@ li {
     animation-direction: normal;
     animation-fill-mode: none;
 } */
-body {
+.body2 {
   overflow: hidden;
-  background: rgb(50,76,128);
   display:flex;
+  animation-name: disapear;
+  animation-delay: 6s;
 }
 
 div.drop-container {
@@ -313,26 +314,29 @@ div.drop-container {
   margin: auto;
   height: 300px;
   width: 300px;
-  z-index:99;
+  /* z-index:99; */
 }
 
 
 div.drop {
   position: absolute;
   top: -25%;
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 400px;
   border-radius: 100% 5% 100% 100%;
   transform: rotate(-45deg);
-  margin: 0px;
+  margin: -18%;
   background: rgb(227, 247, 255);
   animation: drip 4s forwards;
-  z-index: 99;
+  /* z-index: 99; */
+  align-content: center;
 }
 
 h1 {
   /* color: white; */
-  color:black;
+  color:rgb(50,76,128);
+  animation-name: dissapear;
+  animation-delay: 6s;
   position: absolute;
   font-size: 4em;
   height: 3em;
@@ -370,7 +374,8 @@ div.drop-container:after {
   width: 75%;
   height: 75%;
   border: 5px solid skyblue;
-  animation: dripple 2s ease-out 1s;
+  animation: dripple 4s ease-out 2s;
+  margin-top: 40%;
 }
 
 div.drop-container:after {
@@ -463,24 +468,20 @@ body {
 }
 @keyframes fill {
     from {
-        top:250px;
-        transform: translateX(-50px) rotate(0deg);
-	transform: translateY(-30px);
+        background-color: (50,76,128);
 	
     }
     to {
-        top:-50px;
-        transform: translateX(-50%) rotate(360deg);
-	transform: translateY(80px)
+        background-color: (252,252,252);
     }
 }
-.watah:after{
+/* .watah:after{
     height: 100%;
     width:100%;
     position:absolute;
     animation: fill ease-in-out 7s;
     background-color:rgb(252,252,252);
-}
+} */
 /* .watahbox{
     height: 580px;
     width:100%;
@@ -496,13 +497,28 @@ body {
 .watahbox2{
     height: 580px;
     width:100%;
-    background-color:rgb(252,252,252);
-    border-radius: 50%;
+    /* background-color:rgb(252,252,252); */
+    /* border-radius: 50%; */
     z-index:80;
     border-top:8px;
     border-bottom:8px;
     border-left:8px;
     border-right:8px;
     animation: fill ease-in-out 7s;
-    animation-delay: 8s;
+    animation-delay: 4s;
+}
+@keyframes disapear {
+    100%(background-color:(50,76,128))
+    900%(background-color:(50,76,128))
+    800%(background-color:(50,76,128))
+    70%(background-color:(50,76,128))
+    60%(background-color:(50,76,128))
+    50%(background-color:(50,76,128))
+    40%(background-color:(50,76,128))
+    50%(background-color:(252,252,252))
+    60%(background-color:(252,252,252))
+    70%(background-color:(252,252,252))
+    80%(background-color:(252,252,252))
+    90%(background-color:(252,252,252))
+    100%(background-color:(252,252,252))
 }
