@@ -54,7 +54,6 @@ body {
     font-weight: bold;
     font-family: Optima;
     width: fit-content;
-    display: flex;
 }
 .menu a {
     text-decoration: none;
@@ -301,8 +300,7 @@ li {
 .body2 {
   overflow: hidden;
   display:flex;
-  animation-name: disapear;
-  animation-delay: 6s;
+  animation: disapear 6s
 }
 
 div.drop-container {
@@ -392,6 +390,12 @@ div.drop-container:after {
     top: 0;
     transform: rotate(0deg);
     border-radius: 100%;
+   from {
+    opacity: 100%;
+   }
+   to {
+    opacity: 0%;
+   }
   }
 }
 
@@ -417,11 +421,13 @@ div.drop-container:after {
     font-family:copperplate
 }
 body {
-	display: flex;
 	background: rgb(50,76,128);
 	min-height: 100vh;
 	align-items: center;
 	justify-content: center;
+    animation-name:disapear;
+    animation-delay:3s;
+    animation-duration: 2s;
 }
 .content h2 {
 	color: rgb(252,252,252);
@@ -509,8 +515,8 @@ body {
 }
 @keyframes disapear {
     100%(background-color:(50,76,128))
-    900%(background-color:(50,76,128))
-    800%(background-color:(50,76,128))
+    90%(background-color:(50,76,128))
+    80%(background-color:(50,76,128))
     70%(background-color:(50,76,128))
     60%(background-color:(50,76,128))
     50%(background-color:(50,76,128))
@@ -521,4 +527,42 @@ body {
     80%(background-color:(252,252,252))
     90%(background-color:(252,252,252))
     100%(background-color:(252,252,252))
+}
+.loader{
+	position: absolute;
+	margin-top: 50%;
+	margin-left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	     -o-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+}
+
+.loader h1{
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-size: 10em;
+	color: rgba(255,255,255,.1);
+	background-color:rgb(252,252,252);
+	background-repeat: repeat-x;
+	-webkit-background-clip: text;
+	animation: animate 15s linear infinite;
+
+}
+
+@keyframes animate{
+	0%{
+		background-position: left 0px top 80px;
+	}
+	40%{
+		background-position: left 800px top -50px;
+	}
+	80%{
+		background-position: left 1800px top -50px;
+	}
+	100%{
+		background-position: left 2400px top 80px;
+	}
 }
