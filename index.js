@@ -20,3 +20,12 @@ function toggleButtonOnOff() {
   elements[0] && elements[0].classList.toggle('on');
     console.log('toggleButtonOnOff');
 }
+
+const titleTextFade = document.querySelector("h1.title.textFade");
+console.log(titleTextFade);
+titleTextFade.onanimationend = () => {
+  console.log("Animation ended");
+  const mainMenu = document.querySelector("ul.main-menu");
+  console.log(mainMenu);
+  mainMenu.classList.toggle("on");
+};

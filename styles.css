@@ -330,10 +330,10 @@ div.drop {
   align-content: center;
 }
 
-h1 {
+h1.title {
   /* color: white; */
   color:rgb(50,76,128);
-  animation-name: dissapear;
+  /* animation-name: fadeIt2; */
   animation-delay: 6s;
   position: absolute;
   font-size: 4em;
@@ -343,12 +343,26 @@ h1 {
   margin: auto;
   margin-bottom: 11%;
   text-align: center;
-  opacity: 0;
-  animation: appear 2s 2.5s forwards;
+  /* opacity: 100%; */
+  /* animation: appear 2s 2.5s forwards; */
   font-family:copperplate;
-  text-shadow: 2px 2px 2px rgb(64, 86, 99);
+  /* text-shadow: 2px 2px 2px rgb(64, 86, 99); */
   z-index:100;
 }
+
+@keyframes fadeText {
+  0%   { color: rgb(50,76,128); }
+  100% { color: rgb(227, 247, 255); display: none; }
+}
+
+h1.title.textFade{       
+  animation-name: fadeText;
+  animation-delay: 4s;    
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;                
+}
+
 
 @keyframes appear {
   0% {
@@ -425,9 +439,6 @@ body {
 	min-height: 100vh;
 	align-items: center;
 	justify-content: center;
-    animation-name:disapear;
-    animation-delay:3s;
-    animation-duration: 2s;
 }
 .content h2 {
 	color: rgb(252,252,252);
@@ -501,7 +512,7 @@ body {
     border-style:double;
 } */
 .watahbox2{
-    height: 580px;
+    height: 597px;
     width:100%;
     /* background-color:rgb(252,252,252); */
     /* border-radius: 50%; */
@@ -510,24 +521,47 @@ body {
     border-bottom:8px;
     border-left:8px;
     border-right:8px;
+    /* animation-name: disapear;
+    background-color: (50,76,128);
     animation: fill ease-in-out 7s;
-    animation-delay: 4s;
+    animation-delay: 4s; */
+    overflow:hidden;
+    /* border-style: double;
+    border-color:rgb(50,76,128);
+    border-width:8px; */
 }
 @keyframes disapear {
-    100%(background-color:(50,76,128))
-    90%(background-color:(50,76,128))
-    80%(background-color:(50,76,128))
-    70%(background-color:(50,76,128))
-    60%(background-color:(50,76,128))
-    50%(background-color:(50,76,128))
-    40%(background-color:(50,76,128))
-    50%(background-color:(252,252,252))
-    60%(background-color:(252,252,252))
-    70%(background-color:(252,252,252))
-    80%(background-color:(252,252,252))
-    90%(background-color:(252,252,252))
-    100%(background-color:(252,252,252))
+    100%{background-color:(50,76,128)}
+    90%{background-color:(50,76,128)}
+    80%{background-color:(50,76,128)}
+    70%{background-color:(50,76,128)}
+    60%{background-color:(50,76,128)}
+    50%{background-color:(50,76,128)}
+    40%{background-color:(50,76,128)}
+    50%{background-color:(227, 247, 255)}
+    60%{background-color:(227, 247, 255)}
+    70%{background-color:(227, 247, 255)}
+    80%{background-color:(227, 247, 255)}
+    90%{background-color:(252,252,252)}
+    100%{background-color:(227, 247, 255)}
 }
+
+@keyframes fadeBackground {
+  0%   { background-color: transparent; }
+  100% { background-color: rgb(227, 247, 255); }
+  /* 100% { background-image:url(./New\ Jelly.png); } */
+}
+ 
+.backgroundFade{       
+  animation-name: fadeBackground;
+  animation-delay: 4s;    
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;                
+  /* animation: 10s fadeIt 3s ease-in-out forwards;  */
+}
+
+
 .loader{
 	position: absolute;
 	margin-top: 50%;
@@ -565,4 +599,43 @@ body {
 	100%{
 		background-position: left 2400px top 80px;
 	}
+}
+
+ul.main-menu {
+  /* background-color: red; */
+  
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+
+  height: fit-content;
+  z-index: 1;
+
+  display:none;
+  flex-direction: column;
+  gap: 20px;
+
+  font-size:25px;
+  font-family: Coperplate;
+
+  font-weight: bold;
+  color:(50,76,128);
+}
+ul.main-menu.on {
+  display:flex;
+  color:(50,76,128);
+}
+ul.main-menu li {
+  list-style: none;
+  color:(50,76,128);
+}
+ul.main-menu li a {
+  text-decoration: none;
+  color:(50,76,128);
 }
