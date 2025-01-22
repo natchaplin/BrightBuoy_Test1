@@ -6,6 +6,9 @@
     <title>BrightBuoy_Web</title>
     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
+    <style>
+    .mySlides {display:none;}
+    </style>
 </head>
 <body>
     <div class="menuContainer">
@@ -47,5 +50,30 @@
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     </div> -->
     <!-- <div id="div1" class="eventualbuoy"></div> -->
+    <h2 class="w3-center">Automatic Slideshow</h2>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="img_.plhdr" style="width:100%">
+  <img class="mySlides" src="img_plhdr.jpg" style="width:100%">
+  <img class="mySlides" src="img_plhdr.jpg" style="width:100%">
+  <img class="mySlides" src="img_plhdr.jpg" style="width:100%">
+</div>
+
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
 </body>
 </html>
