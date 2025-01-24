@@ -8,6 +8,10 @@
     <script src="index.js"></script>
     <style>
     .mySlides {display:none;}
+    .mySlides {border-width:4px}
+    .mySlides {border-color: rgb(252,252,252)}
+    .mySlides {height:300px}
+    .mySlides {width:100%}
     </style>
 </head>
 <body>
@@ -74,7 +78,7 @@
       myIndex++;
       if (myIndex > x.length) {myIndex = 1}    
       x[myIndex-1].style.display = "block";  
-      setTimeout(carousel, 2000); // Change image every 2 seconds
+      setTimeout(carousel, 3500); // Change image every 3.5 seconds
     }
 </script>
 </body>
