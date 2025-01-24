@@ -188,8 +188,8 @@ li {
 .bigMenu {
     position: fixed;
     width:15%;
-    height:auto;
-    z-index:10;
+/*     height:auto;
+    z-index:10; */
     background-color:rgba(0, 0, 0, 0.75);
     color:white;
     display: none;
@@ -610,7 +610,7 @@ ul.main-menu {
   left: 0;
   right: 0;
   
-  margin: auto;
+  margin: 0;
   text-align: center;
   vertical-align: middle;
 
