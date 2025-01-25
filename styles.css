@@ -185,11 +185,11 @@ li {
     background-color: black(0,0,0,0.9);
    }
 
-.bigMenu {
+   .bigMenu {
     position: fixed;
     width:15%;
-/*     height:auto;
-    z-index:10; */
+    height:100%;
+    z-index:10;
     background-color:rgba(0, 0, 0, 0.75);
     color:white;
     display: none;
