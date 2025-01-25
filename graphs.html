@@ -40,9 +40,58 @@
         <li class="button"><a href="buoy_list.html">Buoy List</a></li>
     </ul>
     <div id="div1" class="hiddenbox"></div>
-    <div id="div1" class="style1" style=> <a class=button href="./index.html">BrightBuoy </a> </div>
+    <div id="div1" class="style1" style=> <a class=button href="./index.html">Graphs</a> </div>
     <script src="index.js"></script>
-    this is will be the map page, with a similar style to the main page but instead of an intro, there will be a graph that shows the mean trend between all of the buoys. If people think it fitting, it could also have sub-graphs (so to speak) that could be based on regions that buoy groups are in?? (Oh, and side note, just in case it hadn't been clear, the main graph would not be just one graph, but multiple, one for each of the different aspects we are meassuring)
-<div id="div1" class="placeholderbox"></div>
-</body>
+    <!-- this is will be the map page, with a similar style to the main page but instead of an intro, there will be a graph that shows the mean trend between all of the buoys. If people think it fitting, it could also have sub-graphs (so to speak) that could be based on regions that buoy groups are in?? (Oh, and side note, just in case it hadn't been clear, the main graph would not be just one graph, but multiple, one for each of the different aspects we are meassuring) -->
+    <!-- <div id="div1" class="placeholderbox"></div> -->
+    <div class="chartContainer">
+      <div  class="chartBox">
+        <canvas id="myChart" width="1000"></canvas>
+      </div>
+      <div  class="buttonBox">
+          <ul>
+              <li><a href="#" class="btn red" onclick="changeChart('rgba(255,99,132,1)', 'Temperature', [12, 19, 3, 5, 2, 3])">Red</a></li>
+              <li><a href="#" class="btn blue" onclick="changeChart('rgba(99,99,255,1)', 'Ph Levels', [1,4,8,5,11,10])">Blue</a></li>
+              <li><a href="#" class="btn green" onclick="changeChart('rgba(99,255,99,1)', 'Oil detection', [3,6,5,8,9,11])">Green</a></li>
+          </ul>
+      </div>
+    </div>
+  
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script>
+              const ctx = document.getElementById('myChart');
+              new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                  datasets: [{
+                    label: 'Temperature',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor:'rgba(255,99,132,1)',
+                    borderColor:'rgba(255,99,132,1)',
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+              function changeChart(color,label,data){
+                console.log("changeChart");
+                console.log(myChart);
+                let chart = Chart.getChart(myChart);
+                console.log(chart);
+                  chart.data.datasets[0].backgroundColor=color;
+                  chart.data.datasets[0].borderColor=color;
+                  chart.data.datasets[0].label=label;
+                  chart.data.datasets[0].data=data;
+                  chart.update()
+              }
+            </script>
+    <div id="div1" class="placeholderbox"></div>
+  </body>
 </html>

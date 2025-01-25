@@ -98,9 +98,9 @@ li {
     background-color:rgb(204, 208, 211);
 }
 .placeholderbox {
-    background-color:rgb(252,252,252);
+    background-color:rgb(50,76,128);
     text-align: center;
-    height: 560px; 
+    height: 100px; 
     align-content: center;
     font-size: 2em; 
     overflow: hidden;
@@ -190,7 +190,7 @@ li {
     width:15%;
     height:100%;
     z-index:10;
-    background-color:rgba(0, 0, 0, 0.75);
+    background-color:rgba(0, 0, 0, .9);
     color:white;
     display: none;
     text-align: center;
@@ -612,7 +612,7 @@ ul.main-menu {
   
   margin: 0;
   text-align: center;
-  vertical-align: middle;
+  vertical-align:middle;
 
   height: auto;
   z-index: 1;
@@ -630,12 +630,80 @@ ul.main-menu {
 ul.main-menu.on {
   display:flex;
   color:(50,76,128);
+  text-align: center;
+  vertical-align:middle;
 }
 ul.main-menu li {
   list-style: none;
   color:(50,76,128);
+  text-align: center;
+  vertical-align:middle;
 }
 ul.main-menu li a {
   text-decoration: none;
   color:(50,76,128);
+  text-align: center;
+  vertical-align:middle;
+}
+.accountstyle {
+  text-align:left;
+  width:40%;
+  margin-left: 5%;
+  height:100px; 
+  align-content: center;
+  font-size: 2em; 
+  overflow: hidden;
+  font-weight: bold;
+  font-family: copperplate;
+}
+.accountstyle2 {
+  text-align:left;
+  width:40%;
+  margin-left: 5%;
+  height:100px; 
+  align-content: center;
+  font-size: 2em; 
+  overflow: hidden;
+  font-weight: bold;
+  font-family: copperplate;
+  margin-top: 3%;
+}
+.accountimage {
+  background-color: rgb(252, 252, 252);
+  border-radius: 30%;
+}
+.buttonBox {
+  max-width:400px;
+  height: 30px;
+}
+.buttonBox ul{
+  display:flex;
+  margin: 10px;
+}
+.buttonBox ul li{
+  list-style: none;
+}
+.btn {
+  border-radius:20px;
+  text-decoration:none;
+  color: #fff;
+  padding: 5px 10px;
+  margin-right:5px;
+}
+.btn.red{
+  background: rgba(255,99,132,1);
+}
+.btn.blue{
+  background: rgba(99,99,255,1);
+}
+.btn.green{
+  background: rgba(99,255,99,1);
+}
+#myChart {
+  background-color: white;
+}
+.chartContainer {
+  background-color: white;
+  max-width: fit-content;
+  margin: 40px auto 0 auto;
 }

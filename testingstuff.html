@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightBuoy_Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="javascript" href="index.js">
+</head>
+<body>
+  <div class="chartContainer">
+    <div  class="chartBox">
+      <canvas id="myChart" width="900"></canvas>
+    </div>
+    <div  class="buttonBox">
+        <ul>
+            <li><a href="#" class="btn red" onclick="changeChart('rgba(255,99,132,1)', 'Temperature', [12, 19, 3, 5, 2, 3])">Red</a></li>
+            <li><a href="#" class="btn blue" onclick="changeChart('rgba(99,99,255,1)', 'Ph Levels', [1,4,8,5,11,10])">Blue</a></li>
+            <li><a href="#" class="btn green" onclick="changeChart('rgba(99,255,99,1)', 'Oil detection', [3,6,5,8,9,11])">Green</a></li>
+        </ul>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const ctx = document.getElementById('myChart');
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                  label: 'Temperature',
+                  data: [12, 19, 3, 5, 2, 3],
+                  backgroundColor:'rgba(255,99,132,1)',
+                  borderColor:'rgba(255,99,132,1)',
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+            function changeChart(color,label,data){
+              console.log("changeChart");
+              console.log(myChart);
+              let chart = Chart.getChart(myChart);
+              console.log(chart);
+                chart.data.datasets[0].backgroundColor=color;
+                chart.data.datasets[0].borderColor=color;
+                chart.data.datasets[0].label=label;
+                chart.data.datasets[0].data=data;
+                chart.update()
+            }
+          </script>
+</body>
+</html>
