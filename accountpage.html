@@ -13,6 +13,15 @@
     .mySlides {height:300px}
     .mySlides {width:100%}
     </style>
+    <style>
+        tr, td {
+            border-bottom: 1px solid rgb(108, 131, 108);
+            border-left: 0px;
+            border-right: 0px;
+            background-color:rgb(243, 225, 198);
+        }
+        tr:hover {background-color: rgb(181, 185, 196);}
+    </style>
 </head>
 <body>
     <div class="menuContainer">
@@ -33,5 +42,71 @@
     <div id="div1" class="accountstyle" style=> <a class=button >Your Account </a> </div>
     <div id="div1" class="accountimage"></div>
     <div id="div1" class="accountstyle2" style=> <a class=button >Your Upoads </a> </div>
+    <table style="width:100%">
+        <tr>
+            <th>Identifer</th>
+            <th>Location</th>
+            <th>Something.1</th>
+            <th>Something.2</th>
+            <th>Something.3</th>
+        </tr>
+        <tr>
+            <th><a class=button2 href="">001</a></th>
+            <th>Saco River</th>
+            <th>Something.4</th>
+            <th>Something.5</th>
+            <th>Something.6</th>
+        </tr>
+        </table>
+        <div class="chartContainer">
+            <div  class="chartBox">
+              <canvas id="myChart" width="1000"></canvas>
+            </div>
+            <div  class="buttonBox">
+                <ul>
+                    <li><a href="#" class="btn red" onclick="changeChart('rgba(255,99,132,1)', 'Temperature', [12, 19, 3, 5, 2, 3])">Temperature</a></li>
+                    <li><a href="#" class="btn blue" onclick="changeChart('rgba(99,99,255,1)', 'Ph Levels', [1,4,8,5,11,10])">Ph Levels</a></li>
+                    <li><a href="#" class="btn green" onclick="changeChart('rgba(99,255,99,1)', 'Oil Detection', [3,6,5,8,9,11])">Oil Detection</a></li>
+                </ul>
+            </div>
+          </div>
+        
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                    const ctx = document.getElementById('myChart');
+                    new Chart(ctx, {
+                      type: 'line',
+                      data: {
+                        labels: ['Janurary 25', 'Feburary 25', 'Macrh 25', 'April 25', 'May 25', 'June 25'],
+                        datasets: [{
+                          label: 'Temperature',
+                          data: [12, 19, 3, 5, 2, 3],
+                          backgroundColor:'rgba(255,99,132,1)',
+                          borderColor:'rgba(255,99,132,1)',
+                          borderWidth: 1
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                    function changeChart(color,label,data){
+                      console.log("changeChart");
+                      console.log(myChart);
+                      let chart = Chart.getChart(myChart);
+                      console.log(chart);
+                        chart.data.datasets[0].backgroundColor=color;
+                        chart.data.datasets[0].borderColor=color;
+                        chart.data.datasets[0].label=label;
+                        chart.data.datasets[0].data=data;
+                        chart.update()
+                    }
+                  </script>
+          <div id="div1" class="placeholderbox"></div>
+      
 </body>
 </html>

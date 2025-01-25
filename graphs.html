@@ -50,9 +50,9 @@
       </div>
       <div  class="buttonBox">
           <ul>
-              <li><a href="#" class="btn red" onclick="changeChart('rgba(255,99,132,1)', 'Temperature', [12, 19, 3, 5, 2, 3])">Red</a></li>
-              <li><a href="#" class="btn blue" onclick="changeChart('rgba(99,99,255,1)', 'Ph Levels', [1,4,8,5,11,10])">Blue</a></li>
-              <li><a href="#" class="btn green" onclick="changeChart('rgba(99,255,99,1)', 'Oil detection', [3,6,5,8,9,11])">Green</a></li>
+              <li><a href="#" class="btn red" onclick="changeChart('rgba(255,99,132,1)', 'Temperature', [12, 19, 3, 5, 2, 3])">Temperature</a></li>
+              <li><a href="#" class="btn blue" onclick="changeChart('rgba(99,99,255,1)', 'Ph Levels', [1,4,8,5,11,10])">Ph Levels</a></li>
+              <li><a href="#" class="btn green" onclick="changeChart('rgba(99,255,99,1)', 'Oil Detection', [3,6,5,8,9,11])">Oil Detection</a></li>
           </ul>
       </div>
     </div>
@@ -63,7 +63,7 @@
               new Chart(ctx, {
                 type: 'line',
                 data: {
-                  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                  labels: ['Janurary 25', 'Feburary 25', 'Macrh 25', 'April 25', 'May 25', 'June 25'],
                   datasets: [{
                     label: 'Temperature',
                     data: [12, 19, 3, 5, 2, 3],
