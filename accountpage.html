@@ -5,7 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrightBuoy_Web</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <style>
+    .mySlides {display:none;}
+    .mySlides {border-width:4px}
+    .mySlides {border-color: rgb(252,252,252)}
+    .mySlides {height:300px}
+    .mySlides {width:100%}
+    </style>
 </head>
 <body>
-  <div>class="style1"</div>
+    <div class="menuContainer">
+        <div class="menu">
+            <a href="#" onclick="toggleBigMenuOnOff();" onclick="toggleButtonOnOff();">☰</a>
+            <a href="index.html">BrightBuoy</a>
+            <input class="button search" type="text" placeholder="Search...">
+            <a href="accountpage.html">Account</a>
+        </div>
+    </div>
+    <ul class="bigMenu">
+        <li class="BrightBuoy"><a href="main.html">Home</a></li>
+        <li class="button"><a href="map.html">Map</a></li>
+        <li class="button"><a href="graphs.html">Graph</a></li>
+        <li class="button"><a href="buoy_list.html">Buoy List</a></li>
+    </ul>
+    <div id="div1" class="hiddenbox"></div>
+    <div id="div1" class="style1" style=> <a class=button href="./index.html">BrightBuoy </a> </div>
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="pexels-bob-jenkin-2007649943-30283523.jpg" style="width:100%">
+  <img class="mySlides" src="pexels-jan-van-der-wolf-11680885-20207103.jpg" style="width:100%">
+  <img class="mySlides" src="pexels-magic-k-24827758-6730950.jpg" style="width:100%">
+  <img class="mySlides" src="pexels-pixabay-248455.jpg" style="width:100%">
+</div>
+
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 3500); // Change image every 3.5 seconds
+    }
+</script>
 </body>
+</html>
